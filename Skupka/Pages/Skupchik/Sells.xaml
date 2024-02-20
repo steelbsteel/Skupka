@@ -1,0 +1,48 @@
+﻿<Page x:Class="Skupka.Pages.Skupchik.Sells"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Skupka.Pages.Skupchik"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Sells">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="83*"/>
+            <RowDefinition Height="637*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Background="#70798C" Height="NaN" Width="NaN">
+            <Button Click="GoBackBtnClick" Content="Назад" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="20" Width="110" Height="40"></Button>
+            <StackPanel.Effect>
+                <DropShadowEffect Opacity="10" RenderingBias="Performance" Direction="270" ShadowDepth="10" BlurRadius="20" />
+            </StackPanel.Effect>
+        </StackPanel>
+        <TextBlock Text="Ваши продажи:" Grid.Row="1" HorizontalAlignment="Center" Margin="0 20 0 0" FontSize="40" FontFamily="Bahnschrift Condensed"></TextBlock>
+        <ListView x:Name="SellsListView" BorderBrush="Transparent" Grid.Row="1" Margin="0 100 0 100" d:ItemsSource="{d:SampleData ItemCount=3}" ScrollViewer.HorizontalScrollBarVisibility="Hidden">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical" Width="1267">
+                        <StackPanel Orientation="Horizontal">
+                            <StackPanel Margin="40 0 0 0" Orientation="Vertical" HorizontalAlignment="Center">
+                                <Label Content="Название товара:"></Label>
+                                <Label Content="{Binding Product.Title}" HorizontalAlignment="Center"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="100 0 0 0" HorizontalAlignment="Center">
+                                <Label Content="Количество:"></Label>
+                                <Label Content="{Binding Count}" HorizontalAlignment="Center"></Label>
+                            </StackPanel>
+                            <StackPanel Orientation="Vertical" Margin="100 0 0 0" HorizontalAlignment="Center">
+                                <Label Content="Дата:"></Label>
+                                <Label Content="{Binding Date}" HorizontalAlignment="Center"></Label>
+                            </StackPanel>
+                        </StackPanel>
+                        <Separator/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,30" Content="Составить акт о продаже" Width="296" Height="55" Click="Button_Click"></Button>
+    </Grid>
+</Page>

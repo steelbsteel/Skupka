@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="34d5e9014e324b2683aa7a47007d8485" Name="Diagram1">
+        <EntityTypeShape EntityType="SkupkaModel.Authorization" Width="1.5" PointX="0.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.Product" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.ProductAdmission" Width="1.5" PointX="5.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.ProductStorage" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.ProductType" Width="1.5" PointX="3.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.Role" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.Sell" Width="1.5" PointX="8.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="SkupkaModel.User" Width="1.5" PointX="3" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="SkupkaModel.FK_User_Authorization" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_Product_ProductType" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_ProductAdmission_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_ProductStorage_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_Sell_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_ProductAdmission_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_ProductStorage_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_User_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="SkupkaModel.FK_Sell_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
